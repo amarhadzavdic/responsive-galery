@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galery</title>
+    <style>
+        body {
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+
+        #container {
+            max-width: 1024px;
+            margin: 0 auto;
+
+        }
+
+        #responsive-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 50px;
+        }
+
+        .box {
+            position: relative;
+            min-width: 120px;
+            max-width: 164px;
+            height: 135px;
+            border-radius: 15px;
+            background-image: url("placeholder-image.png");
+            background-color: #3abfff;
+            background-size: contain;
+            background-position: 50% 30%;
+        }
+
+        .box::after {
+            width: 100%;
+            height: 20%;
+            content: "Image Title";
+            border-radius: 0px 0px 15px 15px;
+            position: absolute;
+            bottom: 0px;
+            text-align: center;
+            box-sizing: border-box;
+            background-color: rgb(221, 220, 220);
+            padding: 5px;
+        }
+
+        #footer {
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 1024px) {
+            #responsive-grid {
+                grid-template-columns: repeat(5, 1fr);
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            #responsive-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
+
+        @media screen and (max-width: 414px) {
+            #responsive-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+            p {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Galery Heading</h1>
+        <div id="responsive-grid">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <div id="footer">
+            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error hic, delectus quam dolor ipsa
+                aut cum quia beatae alias recusandae explicabo dignissimos vitae id aliquid illo corrupti, minus itaque
+                natus? Labore provident quidem ea, illo tempore harum ratione, dolorum minus voluptas, nostrum nesciunt
+                aperiam atque corrupti eveniet saepe iure cum? Cupiditate commodi doloremque saepe eum quia, similique
+                temporibus sunt ut cumque dolorum quidem, debitis quae fugiat ea ex eius vero dignissimos consectetur
+                blanditiis aspernatur mollitia, earum magni? Odit voluptatibus esse laboriosam illum corporis magnam
+                quibusdam, commodi, dignissimos natus fuga iste molestias. Maxime cumque dolore aliquam impedit eius
+                eligendi, dolores consectetur?
+            </p>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
